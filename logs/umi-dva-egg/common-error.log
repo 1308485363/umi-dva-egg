@@ -1,0 +1,131 @@
+2021-06-01 19:20:06,085 ERROR 59178 [-/127.0.0.1/-/11ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/yangzhe/work/umi-dva-egg/node_modules/egg/lib/application.js:266:15)
+    at Object.get cookies [as cookies] (/Users/yangzhe/work/umi-dva-egg/node_modules/egg/app/extend/context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/yangzhe/work/umi-dva-egg/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/yangzhe/work/umi-dva-egg/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/yangzhe/work/umi-dva-egg/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/yangzhe/work/umi-dva-egg/node_modules/koa-compose/index.js:42:32)
+    at /Users/yangzhe/work/umi-dva-egg/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/yangzhe/work/umi-dva-egg/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/yangzhe/work/umi-dva-egg/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/yangzhe/work/umi-dva-egg/node_modules/koa-compose/index.js:42:32)
+
+pid: 59178
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-01 20:45:15,588 ERROR 64942 [egg-view-assets] port 8002 has been used
+2021-06-01 20:50:38,226 ERROR 65262 nodejs.AssertionError [ERR_ASSERTION]: Can't find home.tpl from /Users/yangzhe/work/umi-dva-egg/app/view
+    at Map.resolve (/Users/yangzhe/work/umi-dva-egg/node_modules/egg-view/lib/view_manager.js:74:5)
+generatedMessage: false
+name: "AssertionError [ERR_ASSERTION]"
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 65262
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-01 21:03:18,672 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 544588ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-01 22:12:03,889 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 4085159ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 00:13:02,647 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 7218745ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 02:03:21,858 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 6319144ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 04:04:19,359 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 7217505ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 06:31:13,560 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 7206585ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 08:02:42,140 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 5448600ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 10:15:11,103 ERROR 65019 nodejs.ClusterClientNoResponseError: client no response in 7888930ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/yangzhe/work/umi-dva-egg/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+name: "ClusterClientNoResponseError"
+pid: 65019
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 11:13:48,490 ERROR 68645 [-/::1/-/5ms GET /news] nodejs.AssertionError [ERR_ASSERTION]: Can't find list.tpl from /Users/yangzhe/work/umi-dva-egg/app/view
+    at Map.resolve (/Users/yangzhe/work/umi-dva-egg/node_modules/egg-view/lib/view_manager.js:74:5)
+generatedMessage: false
+name: "AssertionError [ERR_ASSERTION]"
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 68645
+hostname: yangzhedeMacBook-Pro.local
+
+2021-06-02 16:51:58,697 ERROR 83975 nodejs.ENOENTError: spawn umi:dev ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:240:19)
+    at onErrorNT (internal/child_process.js:415:16)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+errno: "ENOENT"
+code: "ENOENT"
+syscall: "spawn umi:dev"
+path: "umi:dev"
+spawnargs: []
+name: "ENOENTError"
+pid: 83975
+hostname: yangzhedeMacBook-Pro.local
+
