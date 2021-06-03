@@ -12,10 +12,10 @@ export default class Index extends React.PureComponent<IProps, IState> {
     
 
     render() {
-        return <div>
+        return <Fragment>
             <div>logas</div>
             <div>asdasdsa</div>
-            {/* <div>asdasdsa</div> */}
-        </div>
+            <div>asdasdsa</div>
+        </Fragment>
     }
 }

@@ -4,6 +4,7 @@
     {% if ctx.app.config.env !== 'local' -%}
     {%- endif %}
     {{ helper.assets.getStyle('umi.css') | safe }}
+    {{ helper.assets.getScript('@@/devScripts.js') | safe }}
   </head>
   <body>
     <div id="root">
