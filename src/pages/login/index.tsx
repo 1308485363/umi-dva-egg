@@ -1,48 +1,41 @@
 import React, { Fragment } from 'react';
 import { connect } from 'dva';
 
-interface IState {
-    
-}
+interface IState {}
 
-interface IProps {
-
-}
+interface IProps {}
 
 const mapState2Props = ({ loading, login }) => {
-    return {
-        loading,
-        busy:
-            loading.effects['togo_chat_userBan/getUserBan'] ||
-            false,
-        ...login,
-    };
+  return {
+    loading,
+    busy: loading.effects['togo_chat_userBan/getUserBan'] || false,
+    ...login,
+  };
 };
 
 @connect(mapState2Props)
 export default class Index extends React.PureComponent<IProps, IState> {
-    state = {
+  state = {};
 
-    }
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'login/getInfo',
+      payload: {
+        a: 123,
+      },
+    });
+    console.log('执行', this.props.dispatch);
+  }
 
-    componentDidMount() {
-        this.props.dispatch({
-            type: 'login/getInfo',
-            payload: {
-                a: 123
-            }
-        })
-        // console.log('执行', this.props.dispatch)
-    }
-    
+  render() {
+    console.log(this.props);
 
-    render() {
-        console.log(this.props)
-
-        return <Fragment>
-            <div>logas</div>
-            <div>asdasdsa</div>
-            <div>asdasdsa</div>
-        </Fragment>
-    }
+    return (
+      <Fragment>
+        <div>logas</div>
+        <div>asdasdsa</div>
+        <div>asdasdsa</div>
+      </Fragment>
+    );
+  }
 }
