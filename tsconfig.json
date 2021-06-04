@@ -13,8 +13,8 @@
     "baseUrl": "./",
     "strict": true,
     // 如果要在js文件中使用ts 把注释掉的这两个选项打开
-    // "allowJs": true,
-    // "checkJs": false,
+    "allowJs": true,
+    "checkJs": false,
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
