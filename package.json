@@ -11,9 +11,11 @@
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "local": "EGG_SERVER_ENV=local egg-bin dev --port=10241",
+    "local": "EGG_SERVER_ENV=local egg-bin dev --port=10341",
     "build": "APP_ROOT=$PWD/src UMI_ENV=prod HTML=none CI=true BABEL_POLYFILL=none yarn umi:build",
-    "debug": "egg-bin debug"
+    "debug": "egg-bin debug",
+    "start": "EGG_SERVER_ENV=prod egg-scripts start --port=10341 --workers=1",
+    "stop": "egg-scripts stop"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -29,6 +31,7 @@
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
     "@umijs/preset-react": "1.x",
+    "antd": "^4.16.1",
     "axios": "^0.21.1",
     "dva": "^2.4.1",
     "egg": "^2.15.1",
@@ -50,6 +53,7 @@
     "egg-mock": "^3.21.0",
     "eslint": "^7.27.0",
     "eslint-config-egg": "^7.1.0",
+    "eslint-config-umi": "^1.6.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.0",
     "react": "17.x",

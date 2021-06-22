@@ -5,11 +5,17 @@
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
-module.exports = appInfo => {
+module.exports = (appInfo) => {
   /**
    * built-in config
    * @type {Egg.EggAppConfig}
    **/
+
+  console.log('----------------------------------------------------------');
+  console.log('NODE_ENV: ', process.env.NODE_ENV);
+  console.log('EGG_SERVER_ENV: ', process.env.EGG_SERVER_ENV);
+  console.log('----------------------------------------------------------');
+
   const config = (exports = {});
 
   // use for cookie sign key, should change to your own and keep security
@@ -20,8 +26,8 @@ module.exports = appInfo => {
     defaultViewEngine: 'nunjucks',
     mapping: {
       '.html': 'nunjucks',
-    }
-  }
+    },
+  };
 
   // 跨域
   // config.cors = {
@@ -32,7 +38,7 @@ module.exports = appInfo => {
   config.news = {
     pageSize: 5,
     serverUrl: 'https://hacker-news.firebaseio.com/v0',
-  }
+  };
 
   // add your middleware config here
   config.middleware = [];
@@ -46,16 +52,16 @@ module.exports = appInfo => {
   config.assets = {
     publicPath: '/public/',
     devServer: {
-        debug: false,
-        command: 'umi dev',
-        port: 8000,
-        env: {
-            APP_ROOT: process.cwd() + '/src',
-            BROWSER: 'none',
-            ESLINT: 'none',
-            SOCKET_SERVER: 'http://127.0.0.1:8000',
-            PUBLIC_PATH: 'http://127.0.0.1:8000',
-        },
+      debug: false,
+      command: 'umi dev',
+      port: 8000,
+      env: {
+        APP_ROOT: process.cwd() + '/src',
+        BROWSER: 'none',
+        ESLINT: 'none',
+        SOCKET_SERVER: 'http://127.0.0.1:8000',
+        PUBLIC_PATH: 'http://127.0.0.1:8000',
+      },
     },
   };
 
