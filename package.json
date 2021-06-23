@@ -14,7 +14,7 @@
     "local": "EGG_SERVER_ENV=local egg-bin dev --port=10341",
     "build": "APP_ROOT=$PWD/src UMI_ENV=prod HTML=none CI=true BABEL_POLYFILL=none yarn umi:build",
     "debug": "egg-bin debug",
-    "start": "EGG_SERVER_ENV=prod egg-scripts start --port=10341 --daemon --workers=1",
+    "start": "EGG_SERVER_ENV=prod egg-scripts start --ip=0.0.0.0 --port=10341 --daemon --workers=1",
     "stop": "egg-scripts stop"
   },
   "gitHooks": {
