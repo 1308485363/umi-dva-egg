@@ -18,4 +18,7 @@ export default defineConfig({
   // },
 
   plugins: [],
+  manifest: {
+    fileName: './config/manifest.json',
+  },
 });
