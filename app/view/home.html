@@ -2,9 +2,10 @@
   <head>
     <title>Hacker News</title>
     {% if ctx.app.config.env !== 'local' -%}
+    {% elif ctx.app.config.env === 'local' %}
+        {{ helper.assets.getScript('@@/devScripts.js') | safe }}
     {%- endif %}
     {{ helper.assets.getStyle('umi.css') | safe }}
-    {{ helper.assets.getScript('@@/devScripts.js') | safe }}
   </head>
   <body>
     <div id="root">

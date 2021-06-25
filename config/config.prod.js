@@ -18,5 +18,9 @@ module.exports = (appInfo) => {
     // path: '/var/run/egg.sock',
   };
 
+  config.manifest = {
+    fileName: './config/manifest.json',
+  };
+
   return config;
 };

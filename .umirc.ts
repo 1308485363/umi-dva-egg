@@ -1,4 +1,6 @@
 import { defineConfig } from 'umi';
+import { resolve } from 'path';
+const { name } = require(resolve('package.json'));
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -18,7 +20,6 @@ export default defineConfig({
   // },
 
   plugins: [],
-  manifest: {
-    fileName: './config/manifest.json',
-  },
+  outputPath: './app/public/',
+  base: name,
 });

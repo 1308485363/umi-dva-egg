@@ -8,13 +8,15 @@
 /yarn.lock
 /package-lock.json
 run
-/app/public/src/
+/app/public/*
 
 # production
+/src/dist
 /dist
 
 # misc
 .DS_Store
+/config/manifest.json
 
 # umi
 /src/.umi
