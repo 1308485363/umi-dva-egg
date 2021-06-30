@@ -6,13 +6,6 @@ pipeline {
         }
     }
     stages {
-        stage('checkout') {
-            steps {
-                git 'https://github.com/1308485363/umi-dva-egg'
-            }
-        }
-    }
-    stages {
         stage('Build') { 
             steps {
                 sh 'npm install -g yarn' 
