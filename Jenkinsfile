@@ -5,4 +5,11 @@ pipeline {
             args '-p 3000:3000' 
         }
     }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'ssh root@47.92.73.227' 
+            }
+        }
+    }
 }
