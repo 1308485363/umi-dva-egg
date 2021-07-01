@@ -5,7 +5,7 @@ FROM node:10.24.0-alpine as base
 RUN mkdir -p /usr/src/nodeapp
 
 # 设置工作目录
-WORKDIR /workspace/umi-dva-egg
+WORKDIR /usr/src/nodeapp
 
 # 设置时区
 RUN apk --update add tzdata \
@@ -26,4 +26,4 @@ COPY . /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg
 
 EXPOSE 10341
 
-CMD npm run start
+CMD npm run build && npm start
