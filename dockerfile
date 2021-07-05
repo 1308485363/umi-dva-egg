@@ -8,10 +8,10 @@ FROM node:10.24.0-alpine as base
 WORKDIR /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg
 
 # 设置时区
-RUN apk --update add tzdata \
-    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone \
-    && apk del tzdata
+# RUN apk --update add tzdata \
+#     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+#     && echo "Asia/Shanghai" > /etc/timezone \
+#     && apk del tzdata
 
 # 拷贝package.json文件到工作目录
 # !!重要：package.json需要单独添加。
