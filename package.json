@@ -12,7 +12,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "local": "EGG_SERVER_ENV=local egg-bin dev --port=10341",
-    "build": "APP_ROOT=$PWD/ UMI_ENV=prod HTML=none CI=true yarn umi:build",
+    "build": "APP_ROOT=$PWD/ UMI_ENV=prod HTML=none CI=true npm run umi:build",
     "debug": "egg-bin debug",
     "start": "EGG_SERVER_ENV=prod egg-scripts start --port=10341 --workers=1 --title=umi-dva-egg",
     "stop": "egg-scripts stop --title=umi-dva-egg"
