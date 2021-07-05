@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'sudo docker run -d --net=host --name umi-dva-egg -v /usr/src/umi-dva-egg:/var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg node/koa-server' 
+                sh 'sudo docker run -d --net=host --name umi-dva-egg -v /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg:/usr/src/umi-dva-egg node/koa-server' 
             }
         }
         // stage('Deliver') { 

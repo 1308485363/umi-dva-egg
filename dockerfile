@@ -5,7 +5,7 @@ FROM node:10.24.0-alpine as base
 RUN mkdir -p /usr/src/umi-dva-egg
 
 # 设置工作目录
-WORKDIR /usr/src/umi-dva-egg
+WORKDIR /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg
 
 # 设置时区
 RUN apk --update add tzdata \
