@@ -2,10 +2,10 @@ FROM node:10.24.0-alpine as base
 # FROM node:10.24.0 as base
 
 # 这个是容器中的文件目录
-RUN mkdir -p /usr/src/nodeapp
+RUN mkdir -p /usr/src/umi-dva-egg
 
 # 设置工作目录
-WORKDIR /usr/src/nodeapp
+WORKDIR /usr/src/umi-dva-egg
 
 # 设置时区
 RUN apk --update add tzdata \
@@ -24,6 +24,8 @@ RUN npm install --production
 
 COPY . /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg
 
+RUN npm run build
+
 EXPOSE 10341
 
-CMD npm run build && npm start
+CMD npm start

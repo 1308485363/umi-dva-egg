@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'docker run -d -e EGG_SERVER_ENV=prod -p 10341:10341 -v ~/logs/umi-dva-egg/  egg server' 
+                sh 'docker run -d -e EGG_SERVER_ENV=prod -p 10341:10341 -v /root/logs/umi-dva-egg/:/root/logs umi-dva-egg' 
             }
         }
         // stage('Deliver') { 
