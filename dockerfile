@@ -20,7 +20,7 @@ WORKDIR /usr/src/umi-dva-egg
 # 所以，正确的顺序是: 添加package.json；安装npm模块；添加源代码。
 COPY package.json ./
 
-RUN npm install --production
+RUN npm i
 
 RUN npm run build
 
