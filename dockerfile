@@ -22,9 +22,14 @@ COPY package.json ./
 
 RUN npm i --registry=https://registry.npm.taobao.org
 
+COPY ./src ./src/
+COPY ./.umirc.* ./
+
 RUN npm run build
 
 COPY . ./
+COPY --from=builder /usr/src/umi-dva-egg/app/public ./app/public
+COPY --from=builder /usr/src/umi-dva-egg/config/manifest.json ./config/
 
 EXPOSE 10341
 
