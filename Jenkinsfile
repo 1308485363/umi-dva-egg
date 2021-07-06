@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'docker build -t egg /var/jenkins_home/workspace/umi-dva-egg'
+                sh 'docker build -t egg --no-cache /var/jenkins_home/workspace/umi-dva-egg'
                 sh 'docker stop umi-dva-egg | true'
                 sh 'docker rm umi-dva-egg | true'
                 sh 'docker run -d --net=host --name umi-dva-egg egg'
