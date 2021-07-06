@@ -28,8 +28,8 @@ COPY ./.umirc.* ./
 RUN npm run build
 
 COPY . ./
-COPY ./app/public /usr/src/umi-dva-egg/app/public 
-COPY ./config/manifest.json /usr/src/umi-dva-egg/config/
+COPY --from=builder /usr/src/umi-dva-egg/app/public/ ./app/public/
+COPY --from=builder /usr/src/umi-dva-egg/config/manifest.json ./config/
 
 EXPOSE 10341
 
