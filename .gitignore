@@ -8,7 +8,7 @@
 /yarn.lock
 /package-lock.json
 run
-/app/public/*
+/app/public/src
 
 # production
 /src/dist
