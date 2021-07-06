@@ -1,15 +1,11 @@
 pipeline {
     agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
+        dockerfile true
     }
     stages {
         stage('Build') { 
             steps {
-                sh 'cd /var/jenkins_home/workspace/umi-dva-egg'
-                sh 'docker build -t egg ./'
+                sh 'docker build -t egg /var/jenkins_home/workspace/umi-dva-egg'
                 sh 'docker stop umi-dva-egg'
                 sh 'docker rm umi-dva-egg'
                 sh 'docker run -d --net=host --name umi-dva-egg egg' 
