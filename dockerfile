@@ -28,6 +28,9 @@ COPY ./.umirc.* ./
 RUN npm run build
 
 COPY . ./
+
+WORKDIR /usr/src/umi-dva-egg
+
 COPY --from=builder /usr/src/umi-dva-egg/app/public/ ./app/public/
 COPY --from=builder /usr/src/umi-dva-egg/config/manifest.json ./config/
 
