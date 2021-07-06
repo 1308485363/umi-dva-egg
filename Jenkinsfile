@@ -10,7 +10,10 @@ pipeline {
             steps {
                 sh 'cd /var/jenkins_home/workspace/umi-dva-egg'
                 sh 'docker build -t egg ./'
+                sh 'docker stop umi-dva-egg'
+                sh 'docker rm umi-dva-egg'
                 sh 'docker run -d --net=host --name umi-dva-egg egg' 
+                sh 'docker ps -a'
             }
         }
         // stage('Deliver') { 
