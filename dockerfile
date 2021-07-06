@@ -22,17 +22,18 @@ COPY package.json ./
 
 RUN npm i --registry=https://registry.npm.taobao.org
 
+FROM base as builder
+
 COPY ./src ./src/
 COPY ./.umirc.* ./
 
 RUN npm run build
 
+FROM base
+
 COPY . ./
-
-WORKDIR /usr/src/umi-dva-egg
-
-COPY --from=builder /usr/src/umi-dva-egg/app/public/ ./app/public/
-COPY --from=builder /usr/src/umi-dva-egg/config/manifest.json ./config/
+COPY --from=builder /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg/app/public/ ./app/public/
+COPY --from=builder /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg/config/manifest.json ./config/
 
 EXPOSE 10341
 
