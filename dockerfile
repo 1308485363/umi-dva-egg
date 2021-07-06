@@ -24,12 +24,16 @@ RUN npm i --registry=https://registry.npm.taobao.org
 
 FROM base as builder
 
+RUN pwd
+
 COPY ./src ./src/
 COPY ./.umirc.* ./
 
 RUN npm run build
 
 FROM base
+
+RUN pwd
 
 COPY . ./
 COPY --from=builder /var/lib/docker/volumes/jenkins-data/_data/workspace/umi-dva-egg/app/public/ ./app/public/
