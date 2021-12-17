@@ -3,11 +3,13 @@
 const Controller = require('egg').Controller;
 
 class LoginController extends Controller {
-  async info() {
+  async index() {
     const { ctx } = this;
-    // console.log('jinru')
+    // console.log(ctx.query);
     // ctx.body = { info: true };
-    ctx.status = 404;
+    const logger = ctx.getLogger('fontendErrLogger');
+    logger.error(JSON.stringify(ctx.query));
+    ctx.status = 200;
     // ctx.body = { status: 400 };
   }
 }

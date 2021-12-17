@@ -6,19 +6,14 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  fastRefresh: {},
-  ssr: {
-    // devServerRender: true
+  plugins: [
+    // require.resolve('./src/plugins/umi-plugin-monitor-error.ts')
+  ],
+  dva: {
+    hmr: true,
   },
-  dva: {},
-  // proxy: {
-  //   '/api': {
-  //     'target': 'http://127.0.0.1:10241/',
-  //     'changeOrigin': true,
-  //   },
-  // },
-
-  plugins: [],
   outputPath: './app/public/',
   base: name,
+  devtool: 'source-map',
+  // mainPath:'/login'
 });

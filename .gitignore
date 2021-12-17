@@ -8,7 +8,8 @@
 /yarn.lock
 /package-lock.json
 run
-/app/public/src
+/app/public/
+typings/
 
 # production
 /src/dist

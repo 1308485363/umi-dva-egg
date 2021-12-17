@@ -1,25 +1,27 @@
 import { ModelState, ModelType } from '@/models';
 import { getInfo } from './service';
 
-export type loginState = ModelState & {
+export type errinfoState = ModelState & {
   list: string[];
 };
 
-const initialState: loginState = {
+const initialState: errinfoState = {
   list: ['a', 'b'],
 };
 
 /**MARK dva */
-const modelConfig: ModelType<loginState> = {
-  namespace: 'login',
+const modelConfig: ModelType<errinfoState> = {
+  namespace: 'errinfo',
   state: initialState,
   reducers: {
     setList(state = initialState, { payload }) {},
   },
   effects: {
-    *getInfo({ payload }, { put, call }) {
+    *getInfo({ payload, callBack }, { put, call }) {
       const res = yield call(getInfo, payload);
-      console.log(res.data);
+      if (callBack) {
+        callBack(res.list);
+      }
       // console.log(res)
       // yield put({
       //     type: 'setList',

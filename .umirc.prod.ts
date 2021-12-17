@@ -7,4 +7,5 @@ export default defineConfig({
     publicPath: `/public/`,
   },
   hash: true,
+  devtool: 'hidden-source-map',
 });

@@ -3,7 +3,7 @@
 /**
  * @param {Egg.Application} app - egg application
  */
-module.exports = app => {
+module.exports = (app) => {
   const { router, controller, middleware } = app;
 
   const logDD = middleware.logDD();
@@ -16,6 +16,8 @@ module.exports = app => {
 
   PrivateRouter.get('/search', controller.search.uppercase);
   PrivateRouter.get('/login/info', controller.login.info);
+  PrivateRouter.get('/errinfo', controller.errinfo.index);
+  PrivateRouter.get('/frontend', controller.frontendErrInfo.index);
 
   router.get('*', controller.home.index);
 };

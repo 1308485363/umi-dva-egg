@@ -23,8 +23,3 @@ module.exports = {
     package: 'egg-view-assets',
   },
 };
-
-// exports.nunjucks = {
-//   enable: true,
-//   package: 'egg-view-nunjucks',
-// }

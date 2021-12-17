@@ -1,6 +1,7 @@
+const path = require('path');
 /* eslint valid-jsdoc: "off" */
 
-'use strict';
+('use strict');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -52,11 +53,11 @@ module.exports = (appInfo) => {
   config.assets = {
     publicPath: '/public/',
     devServer: {
-      debug: false,
+      debug: true,
       command: 'umi dev',
       port: 8000,
       env: {
-        APP_ROOT: process.cwd() + '/src',
+        // APP_ROOT: process.cwd() + '/src',
         BROWSER: 'none',
         ESLINT: 'none',
         SOCKET_SERVER: 'http://127.0.0.1:8000',
@@ -64,6 +65,19 @@ module.exports = (appInfo) => {
       },
     },
   };
+
+  config.customLogger = {
+    fontendErrLogger: {
+      file: path.join(appInfo.root, `logs/fontend-error-web.log`),
+      formatter(meta) {
+        return `{ ${meta} }`;
+      },
+    },
+  };
+
+  // config.logrotator = {
+  //   filesRotateByHour: ''
+  // }
 
   // add your user config here
   const userConfig = {
